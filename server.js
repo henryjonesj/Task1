@@ -11,8 +11,8 @@ var db
 MongoClient.connect('mongodb://admin:admin@ds141358.mlab.com:41358/ironhacks', (err, database) => {
   if (err) return console.log(err)
   db = database
-  app.listen(3000, () => {
-    console.log('listening on 3000')
+  app.listen(5000, () => {
+    console.log('listening on 5000')
   })
 })
 
