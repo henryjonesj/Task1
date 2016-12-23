@@ -11,9 +11,9 @@ var db
 MongoClient.connect('mongodb://admin:admin@ds141358.mlab.com:41358/ironhacks', (err, database) => {
   if (err) return console.log(err)
   db = database
-  app.listen(5000, () => {
-    console.log('listening on 5000')
-  })
+  app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+})
 })
 
 app.post('/quotes', (req, res) => {
